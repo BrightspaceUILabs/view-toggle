@@ -1,11 +1,16 @@
 {
-  "name": "<%= packageName %>",
-  "description": "<%= description %>",
-  "repository": "https://github.com/<%= githubOrg %>/<%= shortName %>.git",
-  <%= publishInfo %>,
+  "name": "@brightspace-ui-labs/view-toggle",
+  "description": "A lit-element component for toggling between views",
+  "repository": "https://github.com/BrightspaceUILabs/view-toggle.git",
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "view-toggle.js"
+  ],
   "scripts": {
     "lint": "eslint . --ext .js,.html",
-    "test": "npm run lint && npm run test:local",
+    "test": "npm run test:local && npm run lint",
     "test:local": "polymer test --skip-plugin sauce",
     "test:sauce": "polymer test --skip-plugin local",
     "test:travis": "polymer test --config-file wct.conf-travis.json"
