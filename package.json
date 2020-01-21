@@ -11,6 +11,7 @@
   "scripts": {
     "lint": "eslint . --ext .js,.html",
     "test": "npm run test:local && npm run lint",
+    "test:diff": "mocha ./test/*.visual-diff.js -t 40000",
     "test:local": "polymer test --skip-plugin sauce",
     "test:sauce": "polymer test --skip-plugin local",
     "test:travis": "polymer test --config-file wct.conf-travis.json"
@@ -18,6 +19,7 @@
   "author": "D2L Corporation",
   "license": "Apache-2.0",
   "devDependencies": {
+    "@brightspace-ui/visual-diff": "^1.1.1",
     "@polymer/test-fixture": "^4",
     "axe-core": "^3",
     "babel-eslint": "^10",
