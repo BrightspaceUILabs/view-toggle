@@ -1,4 +1,4 @@
-# d2l-labs-view-toggle
+# d2l-view-toggle
 
 [![NPM version](https://img.shields.io/npm/v/@brightspace-ui-labs/view-toggle.svg)](https://www.npmjs.org/package/@brightspace-ui-labs/view-toggle)
 [![Greenkeeper badge](https://badges.greenkeeper.io/BrightspaceUILabs/view-toggle.svg)](https://greenkeeper.io/)
@@ -34,7 +34,7 @@ npm install @brightspace-ui-labs/view-toggle
 <script type="module">
     import '@brightspace-ui-labs/view-toggle/view-toggle.js';
 </script>
-<d2l-labs-view-toggle>My element</d2l-labs-view-toggle>
+<d2l-view-toggle></d2l-view-toggle>
 ```
 
 ## Developing, Testing and Contributing
