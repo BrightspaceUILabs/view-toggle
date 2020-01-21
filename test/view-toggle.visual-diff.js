@@ -1,9 +1,9 @@
 const puppeteer = require('puppeteer');
 const VisualDiff = require('@brightspace-ui/visual-diff');
 
-describe('d2l-button', function() {
+describe('d2l-view-toggle', function() {
 
-	const visualDiff = new VisualDiff('button', __dirname);
+	const visualDiff = new VisualDiff('view-toggle', __dirname);
 
 	let browser, page;
 
@@ -11,7 +11,7 @@ describe('d2l-button', function() {
 		browser = await puppeteer.launch();
 		page = await browser.newPage();
 		await page.setViewport({width: 800, height: 800, deviceScaleFactor: 2});
-		await page.goto(`${visualDiff.getBaseUrl()}/components/button/test/button.visual-diff.html`, {waitUntil: ['networkidle0', 'load']});
+		await page.goto(`${visualDiff.getBaseUrl()}/view-toggle/test/view-toggle.visual-diff.html`, {waitUntil: ['networkidle0', 'load']});
 		await page.bringToFront();
 	});
 
