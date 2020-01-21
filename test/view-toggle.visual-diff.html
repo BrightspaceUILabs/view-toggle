@@ -4,7 +4,8 @@
 		<link rel="stylesheet" href="../../../test/styles.css" type="text/css">
 		<script src="/node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
 		<script type="module">
-			import '../d2l-view-toggle.js';
+			import '../view-toggle.js';
+			import '@brightspace-ui/core/components/typography/typography';
 		</script>
 		<title>d2l-view-toggle</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,18 +15,21 @@
 	<body class="d2l-typography">
 		<div class="visual-diff">
 			<d2l-view-toggle
+				id="two"
 				toggleOptions='[{"text":"Bananas","val":"overall"},{"text":"Minions","val":"minions"}]'
 				text="Toggle: ">
 			</d2l-view-toggle>
 		</div>
 		<div class="visual-diff">
 			<d2l-view-toggle
+				id="three"
 				toggleOptions='[{"text":"Bananas","val":"overall"},{"text":"Minions","val":"minions"},{"text":"Pyjamas","val":"subject"}]'
 				text="Toggle: ">
 			</d2l-view-toggle>
 		</div>
 		<div class="visual-diff">
 			<d2l-view-toggle
+				id="four"
 				toggleOptions='[{"text":"Bananas","val":"overall"},{"text":"Minions","val":"minions"},{"text":"Pyjamas","val":"subject"},{"text":"Rockstar","val":"rock"}]'
 				text="Toggle: ">
 			</d2l-view-toggle>

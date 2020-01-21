@@ -33,7 +33,7 @@ class ViewToggle extends RtlMixin(LitElement) {
 			:host([dir="rtl"]) button.d2l-view-toggle-left {
 				border-top-right-radius: 0.3rem;
 				border-bottom-right-radius: 0.3rem;
-				border-left-color: transparent;
+				border-left-color: solid;
 				border-top-left-radius: 0rem;
 				border-bottom-left-radius: 0rem;
 				border-right-color: var(--d2l-color-mica);
@@ -125,8 +125,9 @@ class ViewToggle extends RtlMixin(LitElement) {
 		return html`
 		<label>
 			<span>${this.text}</span>
-			${this.toggleOptions && this.toggleOptions.map(this._renderButton.bind(this))}
-		</label>
+			</label>
+		${this.toggleOptions && this.toggleOptions.map(this._renderButton.bind(this))}
+
 		`;
 	}
 	_renderButton(option, index) {
