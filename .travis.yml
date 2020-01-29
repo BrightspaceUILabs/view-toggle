@@ -24,7 +24,8 @@ deploy:
     email: d2ltravisdeploy@d2l.com
     skip_cleanup: true
     api_key:
-      # d2l-travis-deploy: ...
+      #09ab......d0dd"
+      secure: Yh9MZeqi7oKb8hOUTMHQ4CwRM2q4esvMv6pM4PaHpfOGRRLTkK8qPY5PK+jqaWWFt2Hf6vdzhGvYpNuavQpB3MNd9BUkW0WTcAfVfJF7PYih++FoKgBk+6VPmzjikxbiTNi2Alud3f5+mrbAysVAsmmjXtdt5OjcvoCJb8c3YMW2iXiMX2frrpLYoRxevGvsEyHsNGXuznktnnnB76K+0Y5yw6/FqynZO5OXoIwWuEXb2lnIQ+Q7VMyqcxqpZLoYbF1kdJA9Hy4XZXqa2yEJrEQEA9znT8UwyVey6EIfwXqufpvltI385vAXJ8ftSrh5DjCx1LVi/UmKJIEBSLrAPPvjANEpoAbk2bPG47/yvAp7K4n0ZPmVxOYjsjwwvuEqUerCxnbuM2zq8+pEYA7yEeTGAc6WkZ1oabe+CYSg9DR2VGXJ0w7zC5hzPLdc9tdoMano90/UKFcCsfSQtXq68EFqsvhRfSs5GudYitomfVMbB28jBJkAot17C7VeXgfMl1IJKc9cJo04OYV+wT1FExUQcP+Wm1iaP9Jgxku8fLKx1+4US1loPN7wDYKietGkLZXzdbg1zRYbIVM9uNUZDGF7FsYD8TXiffIDZHS6cs+5M1pGK0+BmQMz/qlre6JX94KXzSdYZ6pcOPzWzNd6Vpluhxd5mCxes7GeFk9bEnk=
     on:
       tags: true
       repo: BrightspaceUILabs/view-toggle
