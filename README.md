@@ -2,7 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/@brightspace-ui-labs/view-toggle.svg)](https://www.npmjs.org/package/@brightspace-ui-labs/view-toggle)
 [![Greenkeeper badge](https://badges.greenkeeper.io/BrightspaceUILabs/view-toggle.svg)](https://greenkeeper.io/)
-[![Build status](https://travis-ci.com/@brightspace-ui-labs/view-toggle.svg?branch=master)](https://travis-ci.com/@brightspace-ui-labs/view-toggle)
+[![Build status](https://travis-ci.com/brightspaceUILabs/view-toggle.svg?branch=master)](https://travis-ci.com/@brightspace-ui-labs/view-toggle)
 
 > Note: this is a ["labs" component](https://github.com/BrightspaceUI/guide/wiki/Component-Tiers). While functional, these tasks are prerequisites to promotion to BrightspaceUI "official" status:
 >
