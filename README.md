@@ -34,7 +34,7 @@ npm install @brightspace-ui-labs/view-toggle
 <script type="module">
     import '@brightspace-ui-labs/view-toggle/view-toggle.js';
 </script>
-<d2l-labs-view-toggle>My element</d2l-labs-view-toggle>
+<d2l-view-toggle>My element</d2l-view-toggle>
 ```
 
 ## Developing, Testing and Contributing
