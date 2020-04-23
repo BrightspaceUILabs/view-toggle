@@ -31,7 +31,7 @@
     "frau-ci": "^1",
     "mocha": "^7.0.1",
     "polymer-cli": "^1",
-    "puppeteer": "^2.1.0",
+    "puppeteer": "^3.0.1",
     "wct-mocha": "^1"
   },
   "dependencies": {
