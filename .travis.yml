@@ -1,5 +1,5 @@
 language: node_js
-node_js: node
+node_js: 10
 addons:
   chrome: stable
 script:
@@ -16,7 +16,7 @@ after_success:
 - frauci-update-version -d=skip && export TRAVIS_TAG=$(frauci-get-version)
 env:
   global:
-  - SAUCE_USERNAME: Horgan
+  - SAUCE_USERNAME=Horgan
   - REPO_NAME=view-toggle
   - OWNER_NAME=BrightspaceUILabs
   #GITHUB_RELEASE_TOKEN
