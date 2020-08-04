@@ -20,7 +20,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@polymer/test-fixture": "^4",
-    "axe-core": "^3",
+    "axe-core": "^4",
     "babel-eslint": "^10",
     "chai": "^4",
     "eslint": "^6",
