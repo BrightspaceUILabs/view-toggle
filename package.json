@@ -20,6 +20,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@polymer/test-fixture": "^4",
+    "@webcomponents/webcomponentsjs": "^2",
     "axe-core": "^3",
     "babel-eslint": "^10",
     "chai": "^4",
@@ -28,7 +29,6 @@
     "eslint-plugin-html": "^6",
     "eslint-plugin-lit": "^1",
     "eslint-plugin-sort-class-members": "^1",
-    "frau-ci": "^1",
     "mocha": "^7.0.1",
     "polymer-cli": "^1",
     "puppeteer": "^2.1.0",
@@ -36,7 +36,6 @@
   },
   "dependencies": {
     "@brightspace-ui/core": "^1",
-    "@webcomponents/webcomponentsjs": "^2",
     "lit-element": "^2"
   }
 }
