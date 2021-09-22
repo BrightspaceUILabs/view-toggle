@@ -68,12 +68,12 @@ class ViewToggle extends RtlMixin(LitElement) {
 			button:hover, button:focus {
 				border: 1px solid var(--d2l-color-celestine) !important;
 			}
-			button[selected] {
+			button[aria-pressed="true"] {
 				background-color: var(--d2l-color-tungsten);
 				border-color: var(--d2l-color-tungsten);
 				color: var(--d2l-color-regolith);
 			}
-			button[selected]:hover, button[selected]:focus {
+			button[aria-pressed="true"]:hover, button[aria-pressed="true"]:focus {
 				box-shadow: inset 0 0 0 2px #ffffff;
 			}
 			:host {
@@ -142,7 +142,6 @@ class ViewToggle extends RtlMixin(LitElement) {
 			aria-pressed="${this._isSelected(option)}"
 			class="d2l-view-toggle-${placement}"
 			@click="${this._selectIndex}"
-			?selected="${this._isSelected(option)}"
 		>${option.text}</button>`;
 	}
 	_isSelected(option) {
