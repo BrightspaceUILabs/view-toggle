@@ -37,7 +37,7 @@
 					await runAxe(element);
 				});
 				it('should fire toggle changed event when the button is clicked', (done) => {
-					const button = element.shadowRoot.querySelector('button[optionVal=subject]');
+					const button = element.shadowRoot.querySelector('button[data-option-val=subject]');
 					element.addEventListener('d2l-view-toggle-changed', function(e) {
 						expect(e.detail.view).to.equal('subject');
 						done();
