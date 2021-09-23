@@ -68,19 +68,19 @@ class ViewToggle extends RtlMixin(LitElement) {
 			button:hover, button:focus {
 				border: 1px solid var(--d2l-color-celestine) !important;
 			}
-			button[selected] {
+			button[aria-pressed="true"] {
 				background-color: var(--d2l-color-tungsten);
 				border-color: var(--d2l-color-tungsten);
 				color: var(--d2l-color-regolith);
 			}
-			button[selected]:hover, button[selected]:focus {
+			button[aria-pressed="true"]:hover, button[aria-pressed="true"]:focus {
 				box-shadow: inset 0 0 0 2px #ffffff;
 			}
 			:host {
 				width: 100%;
 				display: flex;
 			}
-			label {
+			.view-toggle-container {
 				display: none;
 			}
 			@media (min-width: 525px) {
@@ -89,7 +89,7 @@ class ViewToggle extends RtlMixin(LitElement) {
 					display: block;
 					width: auto;
 				}
-				label {
+				.view-toggle-container {
 					margin: 0 0.9rem;
 					display: inline;
 				}
@@ -107,7 +107,7 @@ class ViewToggle extends RtlMixin(LitElement) {
 		super.connectedCallback();
 	}
 	_selectIndex(e) {
-		this.selectedOption = e.target.getAttribute('optionVal');
+		this.selectedOption = e.target.dataset.optionVal;
 		this.dispatchEvent(
 			new CustomEvent(
 				'd2l-view-toggle-changed',
@@ -123,10 +123,10 @@ class ViewToggle extends RtlMixin(LitElement) {
 	}
 	render() {
 		return html`
-		<label>
+		<div class="view-toggle-container">
 			<span>${this.text}</span>
 			${this.toggleOptions && this.toggleOptions.map(this._renderButton.bind(this))}
-		</label>
+		</div>
 		`;
 	}
 	_renderButton(option, index) {
@@ -138,13 +138,14 @@ class ViewToggle extends RtlMixin(LitElement) {
 			placement = 'right';
 		}
 		return html`<button
-			optionVal="${option.val}"
-			?aria-label="${option.text}"
-			@aria-pressed="[[_isPressed(_viewTypes.submissions, currentSelected)]]"
+			data-option-val="${option.val}"
+			aria-pressed="${this._isSelected(option)}"
 			class="d2l-view-toggle-${placement}"
 			@click="${this._selectIndex}"
-			?selected="${option.val === this.selectedOption}"
 		>${option.text}</button>`;
+	}
+	_isSelected(option) {
+		return option.val === this.selectedOption;
 	}
 }
 customElements.define('d2l-view-toggle', ViewToggle);
