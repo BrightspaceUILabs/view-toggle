@@ -14,6 +14,7 @@ jobs:
         uses: Brightspace/third-party-actions@actions/checkout
         with:
           persist-credentials: false
+          node-version: '14'
       - name: Setup Node
         uses: Brightspace/third-party-actions@actions/setup-node
       - name: Semantic Release
