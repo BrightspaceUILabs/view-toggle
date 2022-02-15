@@ -32,7 +32,10 @@ npm install @brightspace-ui-labs/view-toggle
 <script type="module">
     import '@brightspace-ui-labs/view-toggle/view-toggle.js';
 </script>
-<d2l-view-toggle>My element</d2l-view-toggle>
+<d2l-view-toggle
+        toggleOptions='[{"text":"Bananas","val":"overall"},{"text":"Minions","val":"minios"},{"text":"Pyjamas","val":"subject"}]'
+        text="Toggle: "
+></d2l-view-toggle>
 ```
 
 ## Developing, Testing and Contributing
