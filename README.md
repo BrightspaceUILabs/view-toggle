@@ -42,7 +42,6 @@ npm install @brightspace-ui-labs/view-toggle
 
 After cloning the repo, run `npm install` to install dependencies.
 
-
 If you don't have it already, install the [Polymer CLI](https://www.polymer-project.org/3.0/docs/tools/polymer-cli) globally:
 
 ```shell
