@@ -18,3 +18,5 @@ jobs:
         env:
           SAUCE_ACCESS_KEY: ${{ secrets.SAUCE_ACCESS_KEY_HORGAN }}
           SAUCE_USERNAME: Horgan
+      - name: Lint (CSS)
+        run: npm run lint:style
