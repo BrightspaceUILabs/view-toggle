@@ -70,7 +70,7 @@ To run local unit tests:
 npm run test:local
 ```
 
-To run a subset of local unit tests, modify your local [index.html](https://github.com/BrightspaceUILabs/view-toggle/blob/master/test/index.html), or start the dev server and navigate to the desired test page.
+To run a subset of local unit tests, modify your local [index.html](https://github.com/BrightspaceUILabs/view-toggle/blob/main/test/index.html), or start the dev server and navigate to the desired test page.
 
 To run both linting and unit tests:
 
@@ -80,9 +80,9 @@ npm test
 
 ## Versioning & Releasing
 
-> TL;DR: Commits prefixed with `fix:` and `feat:` will trigger patch and minor releases when merged to `master`. Read on for more details...
+> TL;DR: Commits prefixed with `fix:` and `feat:` will trigger patch and minor releases when merged to `main`. Read on for more details...
 
-The [sematic-release GitHub Action](https://github.com/BrightspaceUI/actions/tree/master/semantic-release) is called from the `release.yml` GitHub Action workflow to handle version changes and releasing.
+The [semantic-release GitHub Action](https://github.com/BrightspaceUI/actions/tree/main/semantic-release) is called from the `release.yml` GitHub Action workflow to handle version changes and releasing.
 
 ### Version Changes
 
