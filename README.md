@@ -42,40 +42,35 @@ npm install @brightspace-ui-labs/view-toggle
 
 After cloning the repo, run `npm install` to install dependencies.
 
-If you don't have it already, install the [Polymer CLI](https://www.polymer-project.org/3.0/docs/tools/polymer-cli) globally:
+### Linting
 
 ```shell
-npm install -g polymer-cli
-```
+# eslint and lit-analyzer
+npm run lint
 
-### Running the demos
-
-To start a [local web server](https://www.polymer-project.org/3.0/docs/tools/polymer-cli-commands#serve) that hosts the demo page and tests:
-
-```shell
-polymer serve
+# eslint only
+npm run lint:eslint
 ```
 
 ### Testing
 
-To lint:
-
 ```shell
-npm run lint
-```
-
-To run local unit tests:
-
-```shell
-npm run test:local
-```
-
-To run a subset of local unit tests, modify your local [index.html](https://github.com/BrightspaceUILabs/view-toggle/blob/main/test/index.html), or start the dev server and navigate to the desired test page.
-
-To run both linting and unit tests:
-
-```shell
+# lint & run headless unit tests
 npm test
+
+# unit tests only
+npm run test:headless
+
+# debug or run a subset of local unit tests
+npm run test:headless:watch
+```
+
+### Running the demos
+
+To start a [@web/dev-server](https://modern-web.dev/docs/dev-server/overview/) that hosts the demo page and tests:
+
+```shell
+npm start
 ```
 
 ## Versioning & Releasing

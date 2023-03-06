@@ -35,6 +35,7 @@
     "puppeteer": "^2.1.0",
     "wct-mocha": "^1"
     "@brightspace-ui/stylelint-config": "^0.7",
+    "@web/dev-server": "^0.1",
     "lit-analyzer": "^1",
     "stylelint": "^15"
   },
