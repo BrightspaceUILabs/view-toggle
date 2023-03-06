@@ -102,24 +102,6 @@ class ViewToggle extends RtlMixin(LitElement) {
 			this.selectedOption = this.toggleOptions[0].val;
 		}
 	}
-	connectedCallback() {
-		super.connectedCallback();
-	}
-	_selectIndex(e) {
-		this.selectedOption = e.target.dataset.optionVal;
-		this.dispatchEvent(
-			new CustomEvent(
-				'd2l-view-toggle-changed',
-				{
-					detail: {
-						view: this.selectedOption
-					},
-					composed: true,
-					bubbles: true
-				}
-			)
-		);
-	}
 	render() {
 		return html`
 		<div class="view-toggle-container">
@@ -127,6 +109,9 @@ class ViewToggle extends RtlMixin(LitElement) {
 			${this.toggleOptions && this.toggleOptions.map(this._renderButton.bind(this))}
 		</div>
 		`;
+	}
+	_isSelected(option) {
+		return option.val === this.selectedOption;
 	}
 	_renderButton(option, index) {
 		let placement = 'centre';
@@ -143,8 +128,20 @@ class ViewToggle extends RtlMixin(LitElement) {
 			@click="${this._selectIndex}"
 		>${option.text}</button>`;
 	}
-	_isSelected(option) {
-		return option.val === this.selectedOption;
+	_selectIndex(e) {
+		this.selectedOption = e.target.dataset.optionVal;
+		this.dispatchEvent(
+			new CustomEvent(
+				'd2l-view-toggle-changed',
+				{
+					detail: {
+						view: this.selectedOption
+					},
+					composed: true,
+					bubbles: true
+				}
+			)
+		);
 	}
 }
 customElements.define('d2l-view-toggle', ViewToggle);
