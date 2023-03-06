@@ -15,6 +15,7 @@
     "test:local": "polymer test --skip-plugin sauce",
     "test:sauce": "polymer test --skip-plugin local",
     "test:travis": "polymer test --config-file wct.conf-travis.json"
+    "lint:lit": "lit-analyzer view-toggle.js --strict",
     "lint:style": "stylelint \"**/*.{js,html}\"",
   },
   "author": "D2L Corporation",
@@ -34,6 +35,7 @@
     "puppeteer": "^2.1.0",
     "wct-mocha": "^1"
     "@brightspace-ui/stylelint-config": "^0.7",
+    "lit-analyzer": "^1",
     "stylelint": "^15"
   },
   "dependencies": {
