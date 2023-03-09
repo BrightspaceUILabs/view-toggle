@@ -2,21 +2,20 @@
 
 [![NPM version](https://img.shields.io/npm/v/@brightspace-ui-labs/view-toggle.svg)](https://www.npmjs.org/package/@brightspace-ui-labs/view-toggle)
 
-> Note: this is a ["labs" component](https://github.com/BrightspaceUI/guide/wiki/Component-Tiers). While functional, these tasks are prerequisites to promotion to BrightspaceUI "official" status:
+> Note: this is a ["labs" component](https://daylight.d2l.dev/developing/getting-started/component-tiers/). While functional, these tasks are prerequisites to promotion to BrightspaceUI "official" status:
 >
-> - [ ] [Design organization buy-in](https://github.com/BrightspaceUI/guide/wiki/Before-you-build#working-with-design)
-> - [ ] [design.d2l entry](http://design.d2l/)
-> - [ ] [Architectural sign-off](https://github.com/BrightspaceUI/guide/wiki/Before-you-build#web-component-architecture)
-> - [ ] [Continuous integration](https://github.com/BrightspaceUI/guide/wiki/Testing#testing-continuously-with-travis-ci)
-> - [ ] [Cross-browser testing](https://github.com/BrightspaceUI/guide/wiki/Testing#cross-browser-testing-with-sauce-labs)
-> - [ ] [Unit tests](https://github.com/BrightspaceUI/guide/wiki/Testing#testing-with-polymer-test) (if applicable)
-> - [ ] [Accessibility tests](https://github.com/BrightspaceUI/guide/wiki/Testing#automated-accessibility-testing-with-axe)
-> - [ ] [Visual diff tests](https://github.com/BrightspaceUI/visual-diff)
-> - [ ] [Localization](https://github.com/BrightspaceUI/guide/wiki/Localization) with Serge (if applicable)
+> - [ ] [Design organization buy-in](https://daylight.d2l.dev/developing/creating-component/before-building/#working-with-design)
+> - [ ] [Architectural sign-off](https://daylight.d2l.dev/developing/creating-component/before-building/#web-component-architecture)
+> - [x] [Continuous integration](https://daylight.d2l.dev/developing/testing/tools/#continuous-integration)
+> - [x] [Cross-browser testing](https://daylight.d2l.dev/developing/testing/cross-browser/)
+> - [ ] [Unit tests](https://daylight.d2l.dev/developing/testing/tools/) (if applicable)
+> - [ ] [Accessibility tests](https://daylight.d2l.dev/developing/testing/accessibility/)
+> - [ ] [Visual diff tests](https://daylight.d2l.dev/developing/testing/visual-difference/)
+> - [ ] Localization with Serge (if applicable)
 > - [ ] Demo page
 > - [ ] README documentation
 
-A lit-element component for toggling between views
+A Lit element component for toggling between views.
 
 ## Installation
 
@@ -42,47 +41,42 @@ npm install @brightspace-ui-labs/view-toggle
 
 After cloning the repo, run `npm install` to install dependencies.
 
-If you don't have it already, install the [Polymer CLI](https://www.polymer-project.org/3.0/docs/tools/polymer-cli) globally:
+### Linting
 
 ```shell
-npm install -g polymer-cli
-```
+# eslint and lit-analyzer
+npm run lint
 
-### Running the demos
-
-To start a [local web server](https://www.polymer-project.org/3.0/docs/tools/polymer-cli-commands#serve) that hosts the demo page and tests:
-
-```shell
-polymer serve
+# eslint only
+npm run lint:eslint
 ```
 
 ### Testing
 
-To lint:
-
 ```shell
-npm run lint
-```
-
-To run local unit tests:
-
-```shell
-npm run test:local
-```
-
-To run a subset of local unit tests, modify your local [index.html](https://github.com/BrightspaceUILabs/view-toggle/blob/master/test/index.html), or start the dev server and navigate to the desired test page.
-
-To run both linting and unit tests:
-
-```shell
+# lint & run headless unit tests
 npm test
+
+# unit tests only
+npm run test:headless
+
+# debug or run a subset of local unit tests
+npm run test:headless:watch
+```
+
+### Running the demos
+
+To start a [@web/dev-server](https://modern-web.dev/docs/dev-server/overview/) that hosts the demo page and tests:
+
+```shell
+npm start
 ```
 
 ## Versioning & Releasing
 
-> TL;DR: Commits prefixed with `fix:` and `feat:` will trigger patch and minor releases when merged to `master`. Read on for more details...
+> TL;DR: Commits prefixed with `fix:` and `feat:` will trigger patch and minor releases when merged to `main`. Read on for more details...
 
-The [sematic-release GitHub Action](https://github.com/BrightspaceUI/actions/tree/master/semantic-release) is called from the `release.yml` GitHub Action workflow to handle version changes and releasing.
+The [semantic-release GitHub Action](https://github.com/BrightspaceUI/actions/tree/main/semantic-release) is called from the `release.yml` GitHub Action workflow to handle version changes and releasing.
 
 ### Version Changes
 

@@ -1,6 +1,6 @@
 import '@brightspace-ui/core/components/icons/icon.js';
 import '@brightspace-ui/core/components/colors/colors.js';
-import { css, html, LitElement } from 'lit-element/lit-element.js';
+import { css, html, LitElement } from 'lit';
 import { RtlMixin } from '@brightspace-ui/core/mixins/rtl-mixin.js';
 
 class ViewToggle extends RtlMixin(LitElement) {
@@ -22,21 +22,21 @@ class ViewToggle extends RtlMixin(LitElement) {
 			css`
 			button.d2l-view-toggle-left,
 			:host([dir="rtl"]) button.d2l-view-toggle-right {
-				border-top-left-radius: 0.3rem;
 				border-bottom-left-radius: 0.3rem;
-				border-right-color: transparent;
-				border-top-right-radius: 0rem;
 				border-bottom-right-radius: 0;
 				border-left-color: var(--d2l-color-mica);
+				border-right-color: transparent;
+				border-top-left-radius: 0.3rem;
+				border-top-right-radius: 0;
 			}
 			button.d2l-view-toggle-right,
 			:host([dir="rtl"]) button.d2l-view-toggle-left {
-				border-top-right-radius: 0.3rem;
+				border-bottom-left-radius: 0;
 				border-bottom-right-radius: 0.3rem;
 				border-left-color: transparent;
-				border-top-left-radius: 0rem;
-				border-bottom-left-radius: 0rem;
 				border-right-color: var(--d2l-color-mica);
+				border-top-left-radius: 0;
+				border-top-right-radius: 0.3rem;
 			}
 			button {
 				background-color: var(--d2l-color-sylvite);
@@ -49,7 +49,7 @@ class ViewToggle extends RtlMixin(LitElement) {
 				display: inline;
 				flex: 1;
 				font-family: inherit;
-				font-size: .7rem;
+				font-size: 0.7rem;
 				font-weight: 700;
 				margin: 0;
 				min-height: calc(2rem + 2px);
@@ -57,13 +57,12 @@ class ViewToggle extends RtlMixin(LitElement) {
 				padding: 0.5rem 1.5rem;
 				text-align: center;
 				transition: box-shadow 0.2s;
-				user-select: none;
-				vertical-align: middle;
-				white-space: nowrap;
-				width: auto;
 				-webkit-user-select: none;
 				-moz-user-select: none;
 				-ms-user-select: none;
+				user-select: none;
+				vertical-align: middle;
+				white-space: nowrap;
 			}
 			button:hover, button:focus {
 				border: 1px solid var(--d2l-color-celestine) !important;
@@ -77,21 +76,21 @@ class ViewToggle extends RtlMixin(LitElement) {
 				box-shadow: inset 0 0 0 2px #ffffff;
 			}
 			:host {
-				width: 100%;
 				display: flex;
+				width: 100%;
 			}
 			.view-toggle-container {
 				display: none;
 			}
 			@media (min-width: 525px) {
 				:host {
-					margin: 0 -0.9rem;
 					display: block;
+					margin: 0 -0.9rem;
 					width: auto;
 				}
 				.view-toggle-container {
-					margin: 0 0.9rem;
 					display: inline;
+					margin: 0 0.9rem;
 				}
 			}`
 		];
@@ -103,24 +102,6 @@ class ViewToggle extends RtlMixin(LitElement) {
 			this.selectedOption = this.toggleOptions[0].val;
 		}
 	}
-	connectedCallback() {
-		super.connectedCallback();
-	}
-	_selectIndex(e) {
-		this.selectedOption = e.target.dataset.optionVal;
-		this.dispatchEvent(
-			new CustomEvent(
-				'd2l-view-toggle-changed',
-				{
-					detail: {
-						view: this.selectedOption
-					},
-					composed: true,
-					bubbles: true
-				}
-			)
-		);
-	}
 	render() {
 		return html`
 		<div class="view-toggle-container">
@@ -128,6 +109,9 @@ class ViewToggle extends RtlMixin(LitElement) {
 			${this.toggleOptions && this.toggleOptions.map(this._renderButton.bind(this))}
 		</div>
 		`;
+	}
+	_isSelected(option) {
+		return option.val === this.selectedOption;
 	}
 	_renderButton(option, index) {
 		let placement = 'centre';
@@ -144,8 +128,20 @@ class ViewToggle extends RtlMixin(LitElement) {
 			@click="${this._selectIndex}"
 		>${option.text}</button>`;
 	}
-	_isSelected(option) {
-		return option.val === this.selectedOption;
+	_selectIndex(e) {
+		this.selectedOption = e.target.dataset.optionVal;
+		this.dispatchEvent(
+			new CustomEvent(
+				'd2l-view-toggle-changed',
+				{
+					detail: {
+						view: this.selectedOption
+					},
+					composed: true,
+					bubbles: true
+				}
+			)
+		);
 	}
 }
 customElements.define('d2l-view-toggle', ViewToggle);
