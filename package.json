@@ -1,6 +1,6 @@
 {
   "name": "@brightspace-ui-labs/view-toggle",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A lit-element component for toggling between views",
   "repository": "https://github.com/BrightspaceUILabs/view-toggle.git",
   "publishConfig": {
